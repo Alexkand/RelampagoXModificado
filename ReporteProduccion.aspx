@@ -80,7 +80,7 @@
         <td class="auto-style12" align="center">
                                    
             <asp:Button ID="btnGestionRetiro" runat="server" Font-Bold="True" Font-Names="Miriam" ForeColor="#193C75" Text="GENERAR REPORTE" OnClick="btnGestionRetiro_Click" />
-                                   
+                        lkjsdlfkjdfkljjdflkdjflkdjflkdfjldkfj           
         </td>
 
         <td>    
