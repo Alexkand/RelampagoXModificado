@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+         <style type="text/css">
+
+
+
+
+    
+        td { 
+            background:#CFCFD4;
+        }
+        table {
+            width: 99%;
+            margin: 10px;
+            /*margin-right: -50px;*/
+            align-content: center;
+        }   
+        .celdaCentrada {
+            background:#CFCFD4;
+            align-content: center;
+            text-align: center;
+        }   
+        
+        
+        
+             .auto-style1 {
+                 height: 20px;
+             }
+         </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <div>
+        
+        <form id="form1" runat="server">
+            <table style="width: 100%;">
+                <tr>
+                    <td colspan="3">
+                        <asp:Image ID="Image1" runat="server" Height="165px" ImageUrl="~/Imagenes/Logo TG.jpg" Width="100%" ImageAlign="Middle" />
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="auto-style1" >
+                        
+                        <asp:Menu ID="mnuPrincipal" runat="server" BorderColor="#003E87" Font-Bold="True" Font-Names="Miriam" ForeColor="#011D5E" OnMenuItemClick="mnuPrincipal_MenuItemClick" Orientation="Horizontal" BackColor="#CFCFD4">
+                            <DynamicHoverStyle BorderColor="#F6B807" />
+                            <DynamicMenuStyle BackColor="#CFCFD4" BorderColor="#043077" />
+                            <DynamicSelectedStyle BackColor="Black" BorderColor="#002F77" />
+                            <Items>
+                                <asp:MenuItem Text="Retiros" Value="Retiros">
+                                    <asp:MenuItem Text="Cartas Retiro" Value="Cartas Retiro"></asp:MenuItem>
+                                    <asp:MenuItem Text="Gestion Retiros" Value="Gestion Retiros"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Devoluciones de Prima" Value="Devoluciones de Prima"></asp:MenuItem>
+                                <asp:MenuItem Text="Informes" Value="Informes">
+                                    <asp:MenuItem Text="Informe Devoluciones de Prima" Value="Informe Devoluciones de Prima"></asp:MenuItem>
+                                    <asp:MenuItem Text="Informe Retiros" Value="Informe Retiros"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Historico Cartera" Value="Historico Pagos Por Mes"></asp:MenuItem>
+                                <asp:MenuItem Text="Reporte Produccion" Value="Reporte Produccion"></asp:MenuItem>
+                                <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>                                
+                            </Items>
+                            <StaticHoverStyle BorderColor="#014691" BorderStyle="Solid" />
+                        </asp:Menu>
+                            
+
+                    </td>
+                </tr>
+            </table>
+            
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+                 </asp:ContentPlaceHolder>
+        <table>
+            <tr>
+                <td colspan="1" class="auto-style23">
+                    <asp:Label ID="lblFechaActual" runat="server" Font-Bold="True" Font-Names="Miriam" ForeColor="#193C75" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style23" colspan="2">
+                    <asp:Label ID="lblUsuario" runat="server" Font-Bold="True" Font-Names="Miriam" ForeColor="#193C75" Text="Label"></asp:Label>
+                </td>
+                
+            </tr>
+        </table>
+        
+           
+        
+       </form>
+    </div>
+    
+        
+        </body>
+</html>
